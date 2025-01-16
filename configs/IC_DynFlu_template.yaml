@@ -1,0 +1,11 @@
+IC:
+    Executable: SMASH_EXECUTABLE
+    Config_file: CONFIG_PATH/smash_initial_conditions_dynflu.yaml  
+    Software_keys:
+        Modi:
+            Collider:
+                Sqrtsnn: ENERGY
+                Initial_Conditions:
+                    Type: "Dynamic"
+                    Energy_Density_Threshold: THRESHOLD
+

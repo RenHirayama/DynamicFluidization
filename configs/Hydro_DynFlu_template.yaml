@@ -1,0 +1,3 @@
+Hydro:
+    Executable: VHLLE_EXECUTABLE
+    Input_file: /OUTPUT_PATH/METHODTHRESHOLD/ENERGY/IC/%Run_ID/SMASH_IC.oscar

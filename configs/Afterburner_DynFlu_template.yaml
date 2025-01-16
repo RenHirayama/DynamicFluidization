@@ -1,0 +1,3 @@
+Afterburner:
+    Executable: SMASH_EXECUTABLE
+    Input_file: /OUTPUT_PATH/METHODTHRESHOLD/ENERGY/Sampler/%Run_ID/particle_lists.oscar
