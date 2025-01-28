@@ -1,11 +1,4 @@
-#===================================================
-#
-#    Copyright (c) 2024
-#      SMASH Hybrid Team
-#
-#    GNU General Public License (GPLv3 or later)
-#
-#===================================================
+# Dynamic Fluidization handler
 
 These scripts are meant to be used alongside the smash-vhlle-hybrid, available in 
 https://github.com/smash-transport/smash-vhlle-hybrid, with dynamic fluidization.
@@ -32,7 +25,7 @@ ions are Au+Au, but this can be changed in the smash_initial_conditions_dynflu.y
 or by adding the appropriate Software_keys to the IC input.
 
 The optional keys are:
-- `-t` or `--threshold`: energy density threshold for fluidization. Default is 0.5 GeV/fmÂ.
+- `-t` or `--threshold`: energy density threshold for fluidization. Default is 0.5 GeV/fmÃ‚.
 - `-m` or `--max_3mom`: maximum momentum for a fluidizable particle. Default is 6 GeV.
 
 These scripts can be adapted for a general usage of the hybrid, i.e. with constant tau
