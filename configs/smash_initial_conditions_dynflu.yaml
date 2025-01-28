@@ -29,4 +29,4 @@ Modi:
         Initial_Conditions:
             Type: "Dynamic"
             Energy_Density_Threshold: THRESHOLD
-
+            Maximum_3Momentum: MAX_3MOM

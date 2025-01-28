@@ -7,7 +7,7 @@
 #SBATCH --error=gen_run_%j.err
 #SBATCH --partition=long
 #SBATCH --time=2-15:29:00
-#SBATCH --mail-type=ALL
+#SBATCH --mail-type=FAIL
 #SBATCH --mem=30GB
 
 export SLURM_WORKING_DIR=HYBRID_PATH
@@ -16,7 +16,7 @@ export CON_hybrid=/lustre/hyihp/AG-Elfner/smash-vhlle-hybrid-framework.sif
 SOURCE=${SLURM_WORKING_DIR}
 
 cd ${SOURCE}
-SYS_DIR=${SOURCE}/"OUTPUT"
+SYS_DIR=${SOURCE}/"OUTPUT_PATH"
 EN_DIR="${SYS_DIR}/DynFluTHRESHOLD/ENERGY"
 CONFIG_DIR=${EN_DIR}"/configs"
 SUFFIX="DynFluTHRESHOLD_ENERGY"
