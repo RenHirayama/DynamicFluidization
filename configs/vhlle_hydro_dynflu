@@ -1,0 +1,25 @@
+eosType   1
+
+etaS      0.2
+zetaS     0.0
+e_crit    0.5
+
+nx        151
+ny        151
+nz        201
+xmin      -20
+xmax      20
+ymin      -20
+ymax      20
+etamin    -20
+etamax    20
+
+icModel    9
+Rgz        1.0
+Rg         1.0
+
+tau0       1.0
+tauMax     20.0
+dtau       0.05
+
+freezeoutOnly 1

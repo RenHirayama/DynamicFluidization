@@ -30,3 +30,7 @@ Modi:
             Type: "Dynamic"
             Energy_Density_Threshold: THRESHOLD
             Maximum_3Momentum: MAX_3MOM
+            Formation_Time_Fraction: 0.5
+
+Collision_Term:
+    Force_Decays_At_End: false

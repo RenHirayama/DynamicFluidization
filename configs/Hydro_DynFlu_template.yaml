@@ -1,3 +1,4 @@
 Hydro:
     Executable: VHLLE_EXECUTABLE
+    Config_file: CONFIG_PATH/smash_initial_conditions_dynflu.yaml
     Input_file: /OUTPUT_PATH/METHODTHRESHOLD/ENERGY/IC/%Run_ID/SMASH_IC.oscar
