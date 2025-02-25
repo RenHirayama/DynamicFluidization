@@ -4,19 +4,30 @@ Logging:
 General:
     Modus:          Collider
     Time_Step_Mode: Fixed
-    Delta_Time:     1.0
-    End_Time:       100.0
+    Delta_Time:     0.2
+    End_Time:       30.0
     Randomseed:     -1
     Nevents:        1
 
 Output:
-    Particles:
-      Format: ["Oscar2013"]
-      Extended: True
-      Only_Final: "Yes"
     Initial_Conditions:
       Format: ["Oscar2013"]
       Extended: True
+    Particles:
+      Format: ["Oscar2013"]
+      Extended: True
+#      Only_Final: "Yes"
+#    Thermodynamics:
+#      Format: ["Lattice_ASCII"]
+#      Type: "hadron"
+#      Quantities: ["tmn"]
+#    Output_Interval: 1
+#
+#Lattice:
+#    Automatic: false
+#    Origin: [-40.0, -40.0, -40.0]
+#    Sizes: [80.0, 80.0, 80.0]
+#    Cell_Number: [100, 100, 100]
 
 Modi:
     Collider:
@@ -30,7 +41,7 @@ Modi:
             Type: "Dynamic"
             Energy_Density_Threshold: THRESHOLD
             Maximum_3Momentum: MAX_3MOM
-            Formation_Time_Fraction: 0.5
+            Formation_Time_Fraction: FLUID_TIME
 
 Collision_Term:
     Force_Decays_At_End: false

@@ -1,3 +1,4 @@
 Afterburner:
     Executable: SMASH_EXECUTABLE
+    Config_file: CONFIG_PATH/smash_afterburner_dynflu.yaml
     Input_file: /OUTPUT_PATH/METHODTHRESHOLD/ENERGY/Sampler/%Run_ID/particle_lists.oscar

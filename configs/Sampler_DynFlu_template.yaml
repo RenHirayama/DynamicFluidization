@@ -1,5 +1,6 @@
 Sampler:
     Executable: SAMPLER_EXECUTABLE
+    Config_file: CONFIG_PATH/hadron_sampler_dynflu
     Software_keys:
         surface: /OUTPUT_PATH/METHODTHRESHOLD/ENERGY/Hydro/%Run_ID/freezeout.dat
 

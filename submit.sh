@@ -5,9 +5,7 @@ energy=$2
 evmin=$3
 evmax=$4
 
-threshold=0.5
-max_3mom=6
-
+source ./default_parameters.sh
 POSITIONAL_ARGS=()
 
 while [[ $# -gt 0 ]]; do
@@ -22,6 +20,11 @@ while [[ $# -gt 0 ]]; do
       shift # past argument
       shift # past value
       ;;
+    -f|--fluid_time|--formation_time_factor)
+      fluid_time="$2"
+      shift
+      shift
+      ;;
     -*|--*)
       echo "Unknown option $1"
       exit 1
@@ -35,8 +38,8 @@ done
 
 set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
 
-bash create_hybrid_configs.sh HYBRID_PATH/${output} ${energy} "DynFlu" -t ${threshold} -m ${max_3mom}
+bash create_hybrid_configs.sh HYBRID_PATH/${output} ${energy} --method "DynFlu" --threshold ${threshold} --fluid_time ${fluid_time}
 sed  -e "s|OUTPUT_PATH|${output}|g" -e "s/ENERGY/${energy}/g" \
      -e "s/THRESHOLD/${threshold}/g" -e "s/MAX_3MOM/${max_3mom}/g" \
      -e "s/EVMIN/${evmin}/" -e "s/EVMAX/${evmax}/" \
-     submit_template.sh > job_run_"${output}"_"${energy}"_DynFlu"${threshold}"_${evmin}-${evmax}.sh
+     submit_template.sh > job_run_"${output}"_ft"${fluid_time}"_en"${energy}"_DynFlu"${threshold}"_${evmin}-${evmax}.sh

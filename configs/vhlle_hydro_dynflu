@@ -1,6 +1,7 @@
 eosType   1
+eosTypeHadron 1
 
-etaS      0.2
+etaS      0.0
 zetaS     0.0
 e_crit    0.5
 
@@ -20,6 +21,6 @@ Rg         1.0
 
 tau0       1.0
 tauMax     20.0
-dtau       0.05
+dtau       0.02
 
 freezeoutOnly 1

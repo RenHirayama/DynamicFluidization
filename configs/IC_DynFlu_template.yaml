@@ -9,3 +9,4 @@ IC:
                     Type: "Dynamic"
                     Energy_Density_Threshold: THRESHOLD
                     Maximum_3Momentum: MAX_3MOM
+                    Formation_Time_Fraction: FLUID_TIME

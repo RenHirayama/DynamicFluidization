@@ -2,10 +2,8 @@
 
 output_path=$1
 energy=$2
-method=$3
 
-threshold=0.5
-max_3mom=6
+source ./default_parameters.sh
 
 POSITIONAL_ARGS=()
 
@@ -16,10 +14,20 @@ while [[ $# -gt 0 ]]; do
       shift # past argument
       shift # past value
       ;;
-    -m|--mom|--max_3mom)
+    --mom|--max_3mom)
       max_3mom="$2"
       shift # past argument
       shift # past value
+      ;;
+    -m|--method)
+      method="$2"
+      shift # past argument
+      shift # past value
+      ;;
+    -f|--fluid_time|--formation_time_factor)
+      fluid_time="$2"
+      shift
+      shift
       ;;
     -*|--*)
       echo "Unknown option $1"
@@ -34,7 +42,7 @@ done
 
 set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
 
-configs_path="${output_path}/${method}${threshold}/${energy}/configs/"
+configs_path="${output_path}/${energy}/configs/"
 templates_path="configs/"
 mkdir -p ${configs_path}
 
@@ -43,6 +51,6 @@ for module in IC Hydro Sampler Afterburner; do
   config=${template/_template/${threshold}_${energy}}
   echo ${template} ${config}
   sed -e "s|OUTPUT_PATH|${output_path}|g" -e "s/ENERGY/${energy}/g" -e "s/METHOD/${method}/g" \
-      -e "s/THRESHOLD/${threshold}/g" -e "s/MAX_3MOM/${max_3mom}/g" \
+      -e "s/THRESHOLD/${threshold}/g" -e "s/MAX_3MOM/${max_3mom}/g" -e "s/FLUID_TIME/${fluid_time}/g" \
       "${templates_path}/${template}" > "${configs_path}/${config}"
 done

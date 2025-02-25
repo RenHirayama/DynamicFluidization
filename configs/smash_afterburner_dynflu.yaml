@@ -1,0 +1,31 @@
+Logging:
+    default: INFO
+
+General:
+    Modus:         List
+    Time_Step_Mode: None
+    Delta_Time:    0.5
+    End_Time:      60.0    # make sure runtime is long enough for back-propagation
+    Randomseed:    -1
+    Nevents:       1 
+
+Output:
+    Particles:
+        Format:          ["Oscar2013"]
+        Only_Final:     "Yes"
+    Thermodynamics:
+        Format: ["Lattice_ASCII"]
+        Type: "hadron"
+        Quantities: ["tmn"]
+    Output_Interval: 2
+
+Lattice:
+    Automatic: false
+    Origin: [-60.0, -60.0, -60.0]
+    Sizes: [120.0, 120.0, 120.0]
+    Cell_Number: [100, 100, 100]
+
+Modi:
+    List:
+        File_Directory: "."
+        Filename: "sampled_particles_list.oscar"
