@@ -16,4 +16,4 @@ sed "s|SAMPLER_EXECUTABLE|${sampler_exe}|g" "configs/Sampler_DynFlu_template.yam
 sed "s|SMASH_EXECUTABLE|${smash_exe}|g" "configs/Afterburner_DynFlu_template.yaml" > "${configs_path}/Afterburner_DynFlu_template.yaml"
 
 cp configs/{smash_{initial_conditions,afterburner}_dynflu.yaml,{vhlle_hydro,hadron_sampler}_dynflu} ${configs_path}/
-cp create_hybrid_configs.sh dynamic_fluidization_run.py ${hybrid_path}
+cp create_hybrid_configs.sh dynamic_fluidization_run.py default_parameters.sh ${hybrid_path}
